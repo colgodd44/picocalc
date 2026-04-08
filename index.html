@@ -1,73 +1,61 @@
-# snake.py – ASCII Snake (single frame, fits on screen)
+PICOCALC
 
-WIDTH = 18
-HEIGHT = 8
 
-def draw_frame(snake, food, score, step):
-print(“SNAKE  score:” + str(score) + “  step:” + str(step))
-print(”+” + “-” * WIDTH + “+”)
-for y in range(HEIGHT):
-line = “|”
-for x in range(WIDTH):
-ch = “ “
-if [x,y] == food:
-ch = “*”
-for i in range(len(snake)):
-if snake[i][0] == x and snake[i][1] == y:
-if i == 0:
-ch = “O”
-else:
-ch = “o”
-line = line + ch
-print(line + “|”)
-print(”+” + “-” * WIDTH + “+”)
 
-snake = [[4,4],[3,4],[2,4],[1,4]]
-food  = [14, 4]
-dx = 1
-dy = 0
-score = 0
+PICOCALC
 
-# Run 8 steps – just show final board state
 
-for step in range(1, 9):
-hx = snake[0][0]
-hy = snake[0][1]
-fx = food[0]
-fy = food[1]
 
-```
-# Simple AI
-if abs(fx - hx) >= abs(fy - hy):
-    if fx > hx:
-        dx = 1; dy = 0
-    else:
-        dx = -1; dy = 0
-else:
-    if fy > hy:
-        dx = 0; dy = 1
-    else:
-        dx = 0; dy = -1
+TERMINAL
+FILES
+EDITOR
+GITHUB
+--:--
+ESC F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 DEL `
+~
+1
+!
+2
+@
+3
+#
+4
+$
+5
+%
+6
+^
+7
+&
+8
+*
+9
+(
+0
+)
+-
+_
+=
++
+TAB Q W E R T Y U I O P [
+{
+]
+}
+CAPS A S D F G H J K L ;
+:
+'
+"
+ENTER SHIFT Z X C V B N M ,
+<
+.
+>
+/ SHIFT CTRL ALT SPACE SYM ▲ ◀ ▼ ▶
 
-newx = hx + dx
-newy = hy + dy
 
-# Clamp to board
-if newx < 0: newx = 0; dx = 1
-if newx >= WIDTH: newx = WIDTH-1; dx = -1
-if newy < 0: newy = 0; dy = 1
-if newy >= HEIGHT: newy = HEIGHT-1; dy = -1
 
-snake.insert(0, [newx, newy])
 
-if newx == food[0] and newy == food[1]:
-    score = score + 10
-    food = [(food[0] + 7) % (WIDTH-2) + 1,
-            (food[1] + 5) % (HEIGHT-2) + 1]
-else:
-    snake.pop()
-```
+USB-C ◈ PICO2W
 
-draw_frame(snake, food, score, 8)
-print(“O=head  o=body  *=food”)
-print(“Run again: python3 snake.py”)
+
+
+
